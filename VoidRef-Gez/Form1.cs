@@ -20,13 +20,14 @@ namespace VoidRef_Gez
         }
 
         bool isPressed = false;
-
+        int globalXOffset = 0;
+        int globalYOffset = 0;
 
         private void moveImageUni(PictureBox tempPB)
         {
             Point tempPoint = PointToClient(Cursor.Position);
-            tempPoint.X -= tempPB.Width / 2;
-            tempPoint.Y -= tempPB.Height / 2;
+            tempPoint.X -= globalXOffset;
+            tempPoint.Y -= globalYOffset;
             tempPB.Location = tempPoint;
         }
 
@@ -39,17 +40,20 @@ namespace VoidRef_Gez
 
         private void pb_MouseDown(object sender, MouseEventArgs e)
         {
+            PictureBox clickedPB = (PictureBox)sender;
+            Point tempPoint = PointToClient(Cursor.Position);
+            globalXOffset = tempPoint.X -= clickedPB.Location.X;
+            globalYOffset = tempPoint.Y -= clickedPB.Location.Y;
+
             isPressed = true;
 
             if (deleteCB.Checked == true)
             {
-                PictureBox clickedPB = (PictureBox)sender;
                 this.Controls.Remove(clickedPB);
             }
 
             if (enlargeCB.Checked == true)
             {
-                PictureBox clickedPB = (PictureBox)sender;
                 double enlargeVal = Convert.ToDouble(textBox1.Text);
                 clickedPB.Height = Convert.ToInt32(clickedPB.Height * enlargeVal);
                 clickedPB.Width = Convert.ToInt32(clickedPB.Width * enlargeVal);
@@ -57,12 +61,10 @@ namespace VoidRef_Gez
 
             if (reduceCB.Checked == true)
             {
-                PictureBox clickedPB = (PictureBox)sender;
                 double reduceVal = Convert.ToDouble(textBox2.Text);
                 clickedPB.Height = Convert.ToInt32(clickedPB.Height / reduceVal);
                 clickedPB.Width = Convert.ToInt32(clickedPB.Width / reduceVal);
             }
-
         }
 
 
@@ -95,7 +97,7 @@ namespace VoidRef_Gez
                 var fileNames = data as string[];
                 if (fileNames.Length > 0)
                 {
-                    int tempIndex = 0;                        
+                    int tempIndex = 0;
                     foreach (string element in fileNames)
                         try
                         {
@@ -104,8 +106,8 @@ namespace VoidRef_Gez
                             {
                                 Name = "pictureBox",
                                 Location = PointToClient(Cursor.Position),
-                                Image = Image.FromFile(fileNames[tempIndex]),     
-                                Size = Image.FromFile(fileNames[tempIndex]).Size, 
+                                Image = Image.FromFile(fileNames[tempIndex]),
+                                Size = Image.FromFile(fileNames[tempIndex]).Size,
                                 SizeMode = PictureBoxSizeMode.Zoom,
                             };
 
@@ -124,7 +126,7 @@ namespace VoidRef_Gez
                             picture.MouseDown += new MouseEventHandler(pb_MouseDown);
                             picture.MouseUp += new MouseEventHandler(pb_MouseUp);
                             picture.MouseMove += new MouseEventHandler(pb_MouseMove);
-                            tempIndex++;                                          
+                            tempIndex++;
 
                         }
                         catch (System.OutOfMemoryException)
