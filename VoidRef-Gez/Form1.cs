@@ -19,7 +19,7 @@ namespace VoidRef_Gez
             this.AllowDrop = true;
         }
 
-        bool isPressed = false;        
+        bool isPressed = false;
 
 
         private void moveImageUni(PictureBox tempPB)
@@ -95,24 +95,23 @@ namespace VoidRef_Gez
                 var fileNames = data as string[];
                 if (fileNames.Length > 0)
                 {
-                    int tempIndex = 0;                        // HACKY, NEEDS FIXING !!!!!
+                    int tempIndex = 0;                        
                     foreach (string element in fileNames)
-                    {
-                        //int index = fileNames.
-
+                        try
                         {
+
                             var picture = new PictureBox
                             {
                                 Name = "pictureBox",
                                 Location = PointToClient(Cursor.Position),
-                                Image = Image.FromFile(fileNames[tempIndex]),     // << fix
-                                Size = Image.FromFile(fileNames[tempIndex]).Size, // << fix
+                                Image = Image.FromFile(fileNames[tempIndex]),     
+                                Size = Image.FromFile(fileNames[tempIndex]).Size, 
                                 SizeMode = PictureBoxSizeMode.Zoom,
                             };
 
                             if (normalizeCB.Checked == true)
                             {
-                                if (picture.Height > Convert.ToInt32(normalizeTB.Text) )
+                                if (picture.Height > Convert.ToInt32(normalizeTB.Text))
                                 {
                                     double diffCoeff = (Convert.ToDouble(normalizeTB.Text) / picture.Height);
                                     picture.Height = Convert.ToInt32(picture.Height * diffCoeff);
@@ -120,15 +119,21 @@ namespace VoidRef_Gez
                                 }
                             }
 
-                            this.Controls.Add(picture);                            
+                            this.Controls.Add(picture);
 
                             picture.MouseDown += new MouseEventHandler(pb_MouseDown);
                             picture.MouseUp += new MouseEventHandler(pb_MouseUp);
-                            picture.MouseMove += new MouseEventHandler(pb_MouseMove);                            
-                            tempIndex++;                                          // << fix
+                            picture.MouseMove += new MouseEventHandler(pb_MouseMove);
+                            tempIndex++;                                          
 
                         }
-                    }
+                        catch (System.OutOfMemoryException)
+                        {
+                            MessageBox.Show("Неподдерживаемый формат файла, или импортируемая картинка слишком большая.");
+                            tempIndex++;
+                        }
+
+
                 }
             }
         }
@@ -145,7 +150,7 @@ namespace VoidRef_Gez
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
