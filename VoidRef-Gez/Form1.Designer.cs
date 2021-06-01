@@ -29,6 +29,7 @@ namespace VoidRef_Gez
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.enlargeCB = new System.Windows.Forms.CheckBox();
@@ -38,6 +39,7 @@ namespace VoidRef_Gez
             this.deleteCB = new System.Windows.Forms.CheckBox();
             this.normalizeCB = new System.Windows.Forms.CheckBox();
             this.normalizeTB = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,28 +60,28 @@ namespace VoidRef_Gez
             // enlargeCB
             // 
             this.enlargeCB.AutoSize = true;
-            this.enlargeCB.Location = new System.Drawing.Point(12, 12);
+            this.enlargeCB.Location = new System.Drawing.Point(8, 10);
             this.enlargeCB.Name = "enlargeCB";
-            this.enlargeCB.Size = new System.Drawing.Size(100, 19);
+            this.enlargeCB.Size = new System.Drawing.Size(85, 19);
             this.enlargeCB.TabIndex = 1;
-            this.enlargeCB.Text = "Увеличить на";
+            this.enlargeCB.Text = "Increase by";
             this.enlargeCB.UseVisualStyleBackColor = true;
             this.enlargeCB.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // reduceCB
             // 
             this.reduceCB.AutoSize = true;
-            this.reduceCB.Location = new System.Drawing.Point(12, 37);
+            this.reduceCB.Location = new System.Drawing.Point(8, 35);
             this.reduceCB.Name = "reduceCB";
-            this.reduceCB.Size = new System.Drawing.Size(106, 19);
+            this.reduceCB.Size = new System.Drawing.Size(81, 19);
             this.reduceCB.TabIndex = 2;
-            this.reduceCB.Text = "Уменьшить на";
+            this.reduceCB.Text = "Reduce by";
             this.reduceCB.UseVisualStyleBackColor = true;
             this.reduceCB.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 8);
+            this.textBox1.Location = new System.Drawing.Point(95, 8);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(59, 23);
             this.textBox1.TabIndex = 3;
@@ -87,7 +89,7 @@ namespace VoidRef_Gez
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 37);
+            this.textBox2.Location = new System.Drawing.Point(95, 33);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(59, 23);
             this.textBox2.TabIndex = 4;
@@ -96,11 +98,11 @@ namespace VoidRef_Gez
             // deleteCB
             // 
             this.deleteCB.AutoSize = true;
-            this.deleteCB.Location = new System.Drawing.Point(12, 62);
+            this.deleteCB.Location = new System.Drawing.Point(8, 60);
             this.deleteCB.Name = "deleteCB";
-            this.deleteCB.Size = new System.Drawing.Size(70, 19);
+            this.deleteCB.Size = new System.Drawing.Size(59, 19);
             this.deleteCB.TabIndex = 5;
-            this.deleteCB.Text = "Удалить";
+            this.deleteCB.Text = "Delete";
             this.deleteCB.UseVisualStyleBackColor = true;
             this.deleteCB.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
@@ -109,16 +111,18 @@ namespace VoidRef_Gez
             this.normalizeCB.AutoSize = true;
             this.normalizeCB.Checked = true;
             this.normalizeCB.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.normalizeCB.Location = new System.Drawing.Point(184, 10);
+            this.normalizeCB.Location = new System.Drawing.Point(165, 10);
             this.normalizeCB.Name = "normalizeCB";
-            this.normalizeCB.Size = new System.Drawing.Size(116, 19);
+            this.normalizeCB.Size = new System.Drawing.Size(120, 19);
             this.normalizeCB.TabIndex = 7;
-            this.normalizeCB.Text = "Нормализовать:";
+            this.normalizeCB.Text = "Normalize height:";
+            this.toolTip1.SetToolTip(this.normalizeCB, "Use this checkbox to normalize image size on import. \r\nYou can set the desired he" +
+        "ight in the text box on the right.");
             this.normalizeCB.UseVisualStyleBackColor = true;
             // 
             // normalizeTB
             // 
-            this.normalizeTB.Location = new System.Drawing.Point(300, 8);
+            this.normalizeTB.Location = new System.Drawing.Point(286, 8);
             this.normalizeTB.Name = "normalizeTB";
             this.normalizeTB.Size = new System.Drawing.Size(39, 23);
             this.normalizeTB.TabIndex = 8;
@@ -138,7 +142,7 @@ namespace VoidRef_Gez
             this.Controls.Add(this.enlargeCB);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
-            this.Text = "Удалить";
+            this.Text = "VoidRef";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Form1_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Form1_DragEnter);
@@ -158,6 +162,7 @@ namespace VoidRef_Gez
         private System.Windows.Forms.CheckBox deleteCB;
         private System.Windows.Forms.CheckBox normalizeCB;
         private System.Windows.Forms.TextBox normalizeTB;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
