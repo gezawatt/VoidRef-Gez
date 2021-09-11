@@ -49,7 +49,8 @@ namespace VoidRef_Gez
 
             if (deleteCB.Checked == true)
             {
-                this.Controls.Remove(clickedPB);
+                Controls.Remove(clickedPB);
+                System.GC.Collect();
             }
 
             if (enlargeCB.Checked == true)

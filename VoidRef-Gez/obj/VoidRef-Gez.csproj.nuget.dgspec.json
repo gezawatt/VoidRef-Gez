@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gorde\\source\\repos\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj": {}
+    "C:\\Users\\gorde\\Desktop\\VoidRef\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gorde\\source\\repos\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj": {
+    "C:\\Users\\gorde\\Desktop\\VoidRef\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gorde\\source\\repos\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj",
+        "projectUniqueName": "C:\\Users\\gorde\\Desktop\\VoidRef\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj",
         "projectName": "VoidRef-Gez",
-        "projectPath": "C:\\Users\\gorde\\source\\repos\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj",
+        "projectPath": "C:\\Users\\gorde\\Desktop\\VoidRef\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj",
         "packagesPath": "C:\\Users\\gorde\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gorde\\source\\repos\\VoidRef-Gez\\VoidRef-Gez\\obj\\",
+        "outputPath": "C:\\Users\\gorde\\Desktop\\VoidRef\\VoidRef-Gez\\VoidRef-Gez\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gorde\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -49,6 +49,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.8, 5.0.8]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -57,7 +75,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
         }
       }
     }
