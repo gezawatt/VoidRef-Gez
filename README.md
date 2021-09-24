@@ -1,7 +1,10 @@
 VoidRef is a simple program designed to be used as a referencing tool when doing creative work (drawing, animating, 3D modeling, etc).
 It is written in c#, and uses .NET 5.0 framework.
 
-Noted feature is support for animated .gif files.
+Working .exe is at VoidRef-Gez/bin/Release/net5.0-windows/VoidRef-Gez.exe
+
+
+Noted feature of this software is support for animated .gif files.
 
 At the moment the build is pretty basic, only inplementing essential functionality.
 
