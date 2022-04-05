@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lD978TxzK3sJRpEgqVS41P8XDJj2KtFkQav5jaV+VK++D1yogCknQ2uuHhMCvaJvtV2U7NklweD7ckwaD6MTKw==",
+  "dgSpecHash": "r38bhUX1XYHYRYCm32S7fJp86xo/Q/vNjyn3DtOOpLxLbXIzx4/l7zI/3E0Qlf3subojqFjVoKlfFnV63d1V2Q==",
   "success": true,
   "projectFilePath": "P:\\Programs\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\gorde\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512",
-    "C:\\Users\\gorde\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\gorde\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\gorde\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
