@@ -132,7 +132,7 @@ namespace VoidRef_Gez
                         }
                         catch (System.OutOfMemoryException)
                         {
-                            MessageBox.Show("Неподдерживаемый формат файла, или импортируемая картинка слишком большая.");
+                            MessageBox.Show("Unsupported file format, or the image is too large.");
                             tempIndex++;
                         }
 

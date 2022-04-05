@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gorde\\Desktop\\VoidRef\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj",
+      "projectUniqueName": "P:\\Programs\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj",
       "projectName": "VoidRef-Gez",
-      "projectPath": "C:\\Users\\gorde\\Desktop\\VoidRef\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj",
+      "projectPath": "P:\\Programs\\VoidRef-Gez\\VoidRef-Gez\\VoidRef-Gez.csproj",
       "packagesPath": "C:\\Users\\gorde\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gorde\\Desktop\\VoidRef\\VoidRef-Gez\\VoidRef-Gez\\obj\\",
+      "outputPath": "P:\\Programs\\VoidRef-Gez\\VoidRef-Gez\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gorde\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -62,7 +62,7 @@
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.8, 5.0.8]"
+            "version": "[5.0.15, 5.0.15]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
@@ -81,7 +81,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
