@@ -6,7 +6,7 @@ Working .exe is at VoidRef-Gez/bin/Release/net5.0-windows/VoidRef-Gez.exe
 
 Noted feature of this software is support for animated .gif files.
 
-At the moment the build is pretty basic, only inplementing essential functionality.
+At the moment the build is pretty basic, only implementing essential functionality.
 
 TODO list:
 1: Add a "save scene" feature;
